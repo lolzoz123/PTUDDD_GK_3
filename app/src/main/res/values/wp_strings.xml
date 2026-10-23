@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wp_label">Music Live Wallpaper</string>
+    <string name="wp_desc">Hình nền chuyển động theo nhạc đang phát</string>
+    <string name="widget_desc">Phát / tạm dừng nhạc ngay trên màn hình chính</string>
+</resources>

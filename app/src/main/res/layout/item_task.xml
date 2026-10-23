@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- .task-row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="22dp"
+        android:paddingTop="9dp"
+        android:paddingEnd="14dp"
+        android:paddingBottom="9dp">
+
+        <!-- .check-button + .task-dot -->
+        <FrameLayout
+            android:id="@+id/btnCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingTop="4dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="4dp">
+
+            <FrameLayout
+                android:id="@+id/dot"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/bg_task_dot_peach">
+
+                <ImageView
+                    android:id="@+id/ivCheck"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_check"
+                    android:visibility="invisible" />
+            </FrameLayout>
+        </FrameLayout>
+
+        <!-- Chế độ xem: tiêu đề + ghi chú + nút sửa/xóa -->
+        <LinearLayout
+            android:id="@+id/layoutView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layoutContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-medium"
+                    android:maxLines="1"
+                    android:textColor="#EBFFFFFF"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:textColor="#75FFFFFF"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btnEdit"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Edit"
+                android:padding="7dp"
+                android:src="@drawable/ic_edit" />
+
+            <ImageButton
+                android:id="@+id/btnDelete"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="3dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Delete"
+                android:padding="7dp"
+                android:src="@drawable/ic_delete" />
+        </LinearLayout>
+
+        <!-- Chế độ sửa (.edit-form) -->
+        <LinearLayout
+            android:id="@+id/layoutEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/etEdit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_input_edit"
+                android:importantForAutofill="no"
+                android:imeOptions="actionDone"
+                android:inputType="textCapSentences"
+                android:maxLines="1"
+                android:padding="9dp"
+                android:singleLine="true"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="sans-serif-medium"
+                android:padding="8dp"
+                android:text="Save"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tvCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                android:text="Cancel"
+                android:textColor="#94FFFFFF"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#14FFFFFF" />
+</LinearLayout>

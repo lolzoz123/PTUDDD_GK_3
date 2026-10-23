@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- nền đặc dự phòng -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#1B3854" />
+        </shape>
+    </item>
+
+    <!-- linear 135deg -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="315"
+                android:type="linear"
+                android:startColor="#274F64"
+                android:centerColor="#1F3552"
+                android:endColor="#433C5C" />
+        </shape>
+    </item>
+
+    <!-- ánh cam góc trên phải -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:centerX="0.78"
+                android:centerY="0.18"
+                android:gradientRadius="40%"
+                android:startColor="#61F6C28D"
+                android:endColor="#00F6C28D" />
+        </shape>
+    </item>
+
+    <!-- ánh xanh ngọc góc dưới trái -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:centerX="0.18"
+                android:centerY="0.88"
+                android:gradientRadius="45%"
+                android:startColor="#6B5FAAB4"
+                android:endColor="#005FAAB4" />
+        </shape>
+    </item>
+
+    <!-- tối dần ở đáy (angle 90: bắt đầu từ đáy đi lên) -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="90"
+                android:type="linear"
+                android:startColor="#47071022"
+                android:centerColor="#00071022"
+                android:endColor="#00071022" />
+        </shape>
+    </item>
+</layer-list>

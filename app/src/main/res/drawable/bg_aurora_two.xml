@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Thay cho .aurora-two (blur) bằng radial gradient mờ dần -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+    <size android:width="300dp" android:height="300dp" />
+    <gradient
+        android:centerX="0.5"
+        android:centerY="0.5"
+        android:endColor="#00B27F94"
+        android:gradientRadius="150dp"
+        android:startColor="#80B27F94"
+        android:type="radial" />
+</shape>
