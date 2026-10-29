@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="56dp"
+    android:height="56dp"
+    android:viewportWidth="56"
+    android:viewportHeight="56">
+
+    <path
+        android:fillColor="#3A3A3F"
+        android:pathData="M0,0h56v56h-56z" />
+
+    <!-- Biểu tượng nốt nhạc ở giữa -->
+    <path
+        android:fillColor="#80FFFFFF"
+        android:pathData="M31,16v16.3c-0.9,-0.5 -1.9,-0.8 -3,-0.8c-2.8,0 -5,1.8 -5,4s2.2,4 5,4s5,-1.8 5,-4V22h6v-6H31z" />
+</vector>

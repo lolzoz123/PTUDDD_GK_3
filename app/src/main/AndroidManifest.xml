@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -15,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme._52300240_52300246">
         <activity
-            android:name=".MainActivity"
+            android:name=".musicwidget"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,14 +24,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".DaylightActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <!-- Màn hình điều khiển nhạc, mở từ nút ở MainActivity -->
-        <activity
-            android:name=".musicwidget"
-            android:exported="false" />
 
         <!-- Service phát nhạc (foreground) -->
         <service
@@ -48,19 +41,10 @@
                 android:resource="@xml/music_widget_info" />
         </receiver>
 
-        <!-- Hình nền động -->
-        <service
-            android:name=".LiveWallpaperService"
-            android:exported="true"
-            android:label="@string/wp_label"
-            android:permission="android.permission.BIND_WALLPAPER">
-            <intent-filter>
-                <action android:name="android.service.wallpaper.WallpaperService" />
-            </intent-filter>
-            <meta-data
-                android:name="android.service.wallpaper"
-                android:resource="@xml/wallpaper" />
-        </service>
+
+        <activity
+            android:name=".OnlineMusicActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
